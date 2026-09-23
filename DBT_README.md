@@ -777,19 +777,7 @@ For optional local development, `dbt parse` and `dbt compile` can be used before
 the Workflow run. Do not edit generated files under `target/` and do not commit
 real credentials.
 
-## 24. Short presentation explanation
-
-> We used SQL for the dbt transformations. Each SQL model contains a SELECT
-> query describing one dimension or fact table. We used YAML to declare the
-> Silver sources, document the models, and define tests. We used one macro to
-> make dbt write directly to the required 03-mart schema. We did not download
-> dbt or run Python locally because dbt was already connected as a Databricks
-> Workflow task. After Silver passed validation, the Workflow ran dbt build.
-> dbt generated the required table DDL, created the five dimensions and two
-> facts as Delta tables, and ran the generic and custom tests. We continued to
-> Analytics only after every dbt model and test passed.
-
-## 25. Completion checklist
+## 24. Completion checklist
 
 - [ ] Bronze notebook succeeded.
 - [ ] Silver notebook and Silver validation succeeded.
